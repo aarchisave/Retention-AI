@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.db
+*.csv
+.env
+secret.key
+node_modules/
+dist/
+.DS_Store

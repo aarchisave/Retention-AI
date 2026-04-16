@@ -1,0 +1,32 @@
+:root {
+  font-family: 'Outfit', system-ui, sans-serif;
+  color-scheme: light;
+}
+
+body.dark-theme {
+  color-scheme: dark;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: var(--bg-deep, #F8FAFC);
+  color: var(--text-primary, #0F172A);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+  display: flex;
+}
