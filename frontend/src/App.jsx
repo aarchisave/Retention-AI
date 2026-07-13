@@ -4,7 +4,7 @@ import {
   AlertCircle, LayoutDashboard, TrendingUp, Frown, Activity, 
   Users, Lightbulb, ShieldCheck, Download, ChevronRight, 
   ArrowUpRight, ArrowDownRight, Bell, Search, Settings, 
-  Zap, Lock, User, Sun, Moon, Filter, Play, ActivitySquare, SlidersHorizontal, X, FileSearch
+  Zap, Lock, User, Sun, Moon, Filter, Play, ActivitySquare, SlidersHorizontal, X, FileSearch, Upload
 } from 'lucide-react';
 import './App.css';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
@@ -246,6 +246,9 @@ export default function App() {
             <p className="main-subtitle">Secure Access: {user.role} · {user.role === 'Team Lead' ? 'Engineering Dept' : (user.role === 'Data Analyst' ? 'Anonymized Dataset' : 'All Departments')}</p>
           </div>
           <div className="top-actions">
+            <button className="btn-primary" style={{display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 1rem', fontSize: '0.85rem', whiteSpace: 'nowrap'}} onClick={() => prompt('Enter external DB connection URI:')}>
+              <Upload size={16} /> Upload Data
+            </button>
             <div className="search-bar">
               <Search size={18} />
               <input type="text" placeholder="Search..." />
